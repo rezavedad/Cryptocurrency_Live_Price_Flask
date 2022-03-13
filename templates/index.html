@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CryptoCurrency</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <img src="https://raw.githubusercontent.com/MariyaSha/SimpleGreetingApp/main/logo.png">
+    <br>
+    <form action="btc" method="post">
+        {% for message in get_flashed_messages() %}
+             <p>{{ message }}</p>
+         {% endfor %}
+         <br>
+        <input type="submit" value="BitCoin" id="btc">
+         <br>
+    </form>
+    <form action="eth" method="post">
+        <input type="submit" value="Etherum" id="eth">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>( created by rezavedad@outlook.de )</p>
+    </form>
+</body>
+</html>
