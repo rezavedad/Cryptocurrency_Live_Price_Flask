@@ -16,7 +16,7 @@ def index():
 @app.route("/btc", methods=['POST', 'GET'])
 def btc():
 	r = requests.get('https://api.coinlore.net/api/ticker/?id=90')
-	btc = r.json()
+	btc = r.text
 	#flash("Hi " + str(request.form['name_input']) + ", great to see you!")
 	flash(btc)
 	return render_template("index.html")
